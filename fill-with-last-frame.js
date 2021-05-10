@@ -1,4 +1,4 @@
-// this script duplicate the last frame to reach the needed number of frames
+// this script duplicates the last frame to reach the needed final number of frames
 
 if (!process.argv[2]) return console.log('please specify a number of frames');
 
