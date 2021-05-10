@@ -14,4 +14,5 @@ const sortedOutFiles = outFiles.filter((file) => outFileFormat.test(file)).map((
 const maxOut = sortedOutFiles[sortedFiles.length-1] || 0;
 
 const command = `ffmpeg -r 24  -f image2 -s 1920x1080 -start_number ${minFrame} -i input/%04d.exr -i sound.mp3 -vframes 1000 -vf eq=gamma=1.5 -vcodec libx264 -crf 25  -pix_fmt yuv420p output/${maxOut+1}.mp4`;
+console.log(`Running ${command}`);
 exec(command);
